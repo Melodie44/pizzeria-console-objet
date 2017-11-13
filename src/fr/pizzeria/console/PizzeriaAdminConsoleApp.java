@@ -55,20 +55,22 @@ public class PizzeriaAdminConsoleApp {
 					Pizza[] tabPizzas2 = new Pizza[tabPizzas.length+1];
 					
 					for(int i=0; i<tabPizzas.length; i++) {
-						
+
 						if(tabPizzas[i].getCode() != null) {
 							
 							tabPizzas2[i] = tabPizzas[i];
-							
-							tabPizzas2[tabPizzas2.length-1] = createPizza();
-							
-							tabPizzas = tabPizzas2;
-							
+
 						}else {
 							
 							tabPizzas[i] = createPizza();
+							
+							break;
 						}
 					}
+					
+					tabPizzas2[tabPizzas2.length-1] = createPizza();
+					
+					tabPizzas = tabPizzas2;
 	
 					break;
 					
